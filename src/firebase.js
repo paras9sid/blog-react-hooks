@@ -2,6 +2,8 @@
 import firebase,{ initializeApp } from "firebase/app";
 import 'firebase/firestore';
 
+////firebase config fields and keys
+
 const firebaseConfig = {
   apiKey: "AIzaSyBnHlUaj8_iZv598jYexzgsp8gr89PP1zE",
   authDomain: "react-blog-904ef.firebaseapp.com",
