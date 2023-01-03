@@ -9,18 +9,24 @@
 // ------------------------------------------------
 
 import {Routes , Route} from 'react-router-dom';
-import {Navbar,CreatePost,Home,PostDetail} from './';
+import Navbar from './Navbar';
+import Home from './Home';
+import PostDetail from './PostDetail';
+import CreatePost from './CreatePost';
+
+// import {Navbar,Home,PostDetail,CreatePost} from './index.js'; // webpack error index.js in new version
 
 function App() {
-  return <div className="container">
+  return (
+    <div className="container">
       <Navbar />
       <Routes>
-          <Route exact path="/" component={Home} /> 
-          <Route exact path="/post/:postId" component = {PostDetail} />  
-          <Route exact path="/create-post" component = {CreatePost} />         
-        </Routes>
-    </div>;
-  
+        <Route path="/" element={<Home />} exact/>
+        <Route path="/post/:postId" element={<PostDetail />} exact/>
+        <Route path="/create-post" element={<CreatePost />}  exact/>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
