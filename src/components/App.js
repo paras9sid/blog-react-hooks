@@ -21,6 +21,7 @@ function App() {
     <div className="container">
       <Navbar />
       <Routes>
+        {/*  //element to use instead of componenet in latest version of react */}
         <Route path="/" element={<Home />} exact/>
         <Route path="/post/:postId" element={<PostDetail />} exact/>
         <Route path="/create-post" element={<CreatePost />}  exact/>
