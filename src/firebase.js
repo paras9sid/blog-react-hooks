@@ -1,6 +1,10 @@
 
-import firebase,{ initializeApp } from "firebase/app";
-import 'firebase/firestore';
+// import firebase,{ initializeApp } from "firebase/app";
+// import 'firebase/firestore';
+
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+
 
 ////firebase config fields and keys
 
@@ -15,5 +19,9 @@ const firebaseConfig = {
   
 };
 
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
+// export const firestore = firebase.firestore();
+
+firebase.initializeApp(firebaseConfig);
+
 export const firestore = firebase.firestore();
