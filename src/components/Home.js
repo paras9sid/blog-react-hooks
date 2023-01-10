@@ -30,7 +30,7 @@ function Home() {
     {posts.map((post,index)=>(
 
       <div className='post' key = {`post-${index}`}>
-        <Link t0 ={`/post/${post.id}`}>
+        <Link to ={`/post/${post.id}`}>
           <h3>{post.title}</h3>
         </Link>
 
